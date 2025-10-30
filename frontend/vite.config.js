@@ -10,40 +10,32 @@ export default defineConfig(({ mode }) => {
       outDir: 'dist',
       emptyOutDir: true,
       sourcemap: mode === 'development',
-      rollupOptions: {
-        output: { manualChunks: undefined },
-      },
     },
     server: {
       host: '0.0.0.0',
       port: 5173,
       strictPort: true,
-
-      // ✅ Add this block
       allowedHosts: [
-        'convotalk2-1.onrender.com', // <-- Your deployed frontend URL
+        'convotalk2-1.onrender.com', // your Render frontend domain
         'localhost',
         '127.0.0.1',
       ],
-
       proxy: {
         '/api': {
           target: env.VITE_API_BASE_URL || 'http://localhost:3000',
           changeOrigin: true,
+          secure: false,
         },
         '/auth': {
           target: env.VITE_API_BASE_URL || 'http://localhost:3000',
           changeOrigin: true,
+          secure: false,
         },
       },
     },
-
     preview: {
       port: 5173,
       strictPort: true,
-
-      // ✅ Also allow the deployed domain during preview
-      allowedHosts: ['convotalk2-1.onrender.com'],
     },
   }
 })
