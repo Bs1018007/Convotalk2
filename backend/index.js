@@ -19,7 +19,7 @@ dotenv.config();
 
 const port = process.env.PORT || 3000;
 const FRONTEND_URL = process.env.NODE_ENV === "production" 
-  ? "https://convotalk2.onrender.com"
+  ? "https://convotalk2-1.onrender.com"
   : "http://localhost:5173";
 
 app.use(express.json({ limit: "10mb" }));

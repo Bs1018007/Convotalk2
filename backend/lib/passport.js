@@ -6,7 +6,7 @@ import User from "../Models/UserModel.js";
 dotenv.config();
 
 const CALLBACK_URL = process.env.NODE_ENV === "production"
-  ? "https://convotalk2.onrender.com/auth/google/callback"
+  ? "https://convotalk2-1.onrender.com/auth/google/callback"
   : "http://localhost:3000/auth/google/callback";
 
 passport.use(
