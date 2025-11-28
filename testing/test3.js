@@ -8,8 +8,8 @@ async function testLoginAndFindSettings() {
 
     await driver.wait(until.elementLocated(By.css("input[placeholder='you@example.com']")), 5000);
 
-    await driver.findElement(By.css("input[placeholder='you@example.com']")).sendKeys("User7@example.com222");
-    await driver.findElement(By.css("input[type='password']")).sendKeys("test1123441443", Key.RETURN);
+    await driver.findElement(By.css("input[placeholder='you@example.com']")).sendKeys("User8@example.com222");
+    await driver.findElement(By.css("input[type='password']")).sendKeys("ttest12345", Key.RETURN);
 
     await driver.wait(until.urlContains("/"), 5000);
 

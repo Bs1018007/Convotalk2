@@ -16,7 +16,6 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       strictPort: true,
       allowedHosts: [
-        'convotalk2-1.onrender.com', // your Render frontend domain
         'localhost',
         '127.0.0.1',
       ],
