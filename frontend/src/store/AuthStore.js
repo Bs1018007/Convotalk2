@@ -68,7 +68,7 @@ export const AuthStore = create((set, get) => ({
   loginWithGoogle: () => {
     const redirectUrl = import.meta.env.MODE === "development" 
       ? "http://localhost:3000/auth/google"
-      : `${window.location.origin}/auth/google`;
+      : `${BASE_URL}/auth/google`;
     window.location.href = redirectUrl;
   },
 
