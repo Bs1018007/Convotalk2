@@ -5,7 +5,7 @@ import { generateToken } from "../lib/jwtokens.js";
 const router = express.Router();
 
 const CLIENT_URL = process.env.NODE_ENV === "production"
-  ? "https://convotalk2.onrender.com"
+  ? "https://convotalk2-2.onrender.com"
   : "http://localhost:5173";
 
 router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
