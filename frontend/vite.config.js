@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
       allowedHosts: [
         'localhost',
         '127.0.0.1',
+        'convotalk2-1.onrender.com'
       ],
       proxy: {
         '/api': {
